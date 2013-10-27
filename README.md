@@ -16,3 +16,6 @@ To setup this django project on your machine, do the following:
 8. pip install -r requirements.txt
 9. python manage.py runserver
 10. go to http://localhost:8000 to verify that the test server is working
+
+
+
