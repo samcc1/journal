@@ -11,7 +11,7 @@ To setup this django project on your machine, do the following:
 3. cd journal
 4. virtualenv env (this creates a virtual python environment called 'env' in the current directory)
 5. source env/bin/activate (this activates the new virtual environment.  you should see '(env)' prepended to your PS1)
-6. git clone git@github.com:samcc1/journal.git
+6. git clone https://github.com/samcc1/journal.git
 7. cd journal
 8. pip install -r requirements.txt
 9. python manage.py runserver
