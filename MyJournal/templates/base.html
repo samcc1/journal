@@ -6,13 +6,20 @@
     <script type="text/javascript" src="/static/jquery.js"></script>
     <script type="text/javascript" src="/static/code.js"></script>
     <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/auth/style.css">
 </head>
 
 
 <body>
 <div id='main'>
 
-<div id='content'>
+{% block navbar %}
+<div id='navbar' class='section'>
+    <a href="/auth/logout">Logout ({{ user.username }})</a>
+</div>
+{% endblock %}
+
+<div id='content' class='section'>
 {% block content %}
 &nbsp;
 {% endblock %}
