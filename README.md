@@ -14,8 +14,8 @@ To setup this django project on your machine, do the following:
 6. git clone https://github.com/samcc1/journal.git
 7. cd journal
 8. pip install -r requirements.txt
-9. python manage.py runserver
-10. go to http://localhost:8000 to verify that the test server is working
-
-
+9. python manage.py syncdb
+10. python manage.py collectstatic
+11. python manage.py runserver
+12. go to http://localhost:8000 to verify that the test server is working
 
