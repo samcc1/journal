@@ -4,11 +4,7 @@ from django.contrib.auth.decorators import login_required
 from MyJournal.forms import NewJournalEntryForm
 from MyJournal.models import JournalEntry
 
-@login_required
-def home(request):
-    return render(request, 'home.html')
 
-    
 @login_required
 def home(request):
     if request.method == 'POST':
