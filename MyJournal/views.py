@@ -17,7 +17,12 @@ def home(request):
             new_entry = form.save(commit=False)
             new_entry.user = request.user
             new_entry.save()
-            return render(request, "journal_entry.html", {'journal_entry': new_entry})
+            response = render(request, "journal_entry.html", {'journal_entry': new_entry})
+            response['X-addJournalEntryStatus'] = 'success'
+        else:
+            response = render(request, "journal_entry_input.html", {'form': form})
+            response['X-addJournalEntryStatus'] = 'failed'
+        return response
     else:
         form = NewJournalEntryForm(initial={'date': datetime.date.today()})
     

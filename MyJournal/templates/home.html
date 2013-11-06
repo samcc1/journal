@@ -2,13 +2,9 @@
 
 {% block content %}
 
-<form name='add_journal_entry' id='add_journal_entry'>
-{% csrf_token %}
-{{ form.as_p }}
-<div id='submit_button_container'>
-<input id='submit_button' type='submit'>
+<div id='form_container'>
+{% include "journal_entry_input.html" %}
 </div>
-</form>
 
 <div id='journal_entries'>
 {% for journal_entry in journal_entries %}
